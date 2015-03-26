@@ -366,10 +366,7 @@
       inputType: "text"
     };
 
-    options = validateButtons(
-      mergeArguments(defaults, arguments, ["title", "callback"]),
-      ["cancel", "confirm"]
-    );
+    options = mergeArguments(defaults, arguments, ["title", "callback"]);
 
     // capture the user's show value; we always set this to false before
     // spawning the dialog to give us a chance to attach some handlers to
