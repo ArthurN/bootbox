@@ -782,6 +782,21 @@
     $.extend(defaults, values);
   };
 
+  exports.setTemplates = function() {
+    var values = {};
+
+    if (arguments.length === 2) {
+      // allow passing of single key/value...
+      values[arguments[0]] = arguments[1];
+    } else {
+      // ... and as an object too
+      values = arguments[0];
+    }
+
+    // deep extend
+    $.extend(true, templates, values);
+  };
+
   exports.hideAll = function() {
     $(".bootbox").modal("hide");
 
