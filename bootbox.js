@@ -389,6 +389,9 @@
         case "time":
         case "number":
         case "password":
+          if (!input.hasClass('bootbox-input')) {
+            input = input.find('.bootbox-input')
+          }
           value = input.val();
           break;
 
